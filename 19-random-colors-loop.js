@@ -14,12 +14,20 @@ function getColor(colorNumber=0)
 		default: return "black"; 
 				 break;
 	}
-}
+	
+};
 
 function getAllStudentColors(){
-	
-	let exampleColor = getColor();
-}
+	var students=0
+	while(students<10){
+		students++;
+		var randomloop=Math.floor(Math.random()*4)+1;
+		let exampleColor = getColor(randomloop);
+		console.log(exampleColor);
+	}
+};
 
-//call the function below with the number of students in the class and print on the console
-getAllStudentColors();
+var result=getAllStudentColors();
+console.log(result);
+
+
