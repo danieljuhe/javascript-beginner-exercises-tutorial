@@ -1,4 +1,4 @@
-const sing = () =>{
+let sing = () =>{
     
     for(i=0; i<=12; i++){
         if (i===11){
@@ -14,7 +14,7 @@ const sing = () =>{
         }
     }
 
-
+let output = parseInt(sing);
 //Your code above ^^^
 
-console.log(sing());
+console.log(output);
