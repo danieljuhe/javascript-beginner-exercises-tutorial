@@ -27,7 +27,7 @@ let person3 = {
 
 let family = {
     lastname: "Doe",
-    members: [person, person2]   //Array of objects, don't forget to add Jimmy
+    members: [person, person2, person3]   //Array of objects, don't forget to add Jimmy
 };
 
 
@@ -42,20 +42,24 @@ function addAllFamilyLuckyNumbers(anArray){
 
 //Enter all your code here:
 //1-CHANGE 4º LUCKY NUMBER OF JOHN DOE
-let newlucky_numbers= 33
-person.lucky_numbers[3]=newlucky_numbers;
+person.lucky_numbers[3]=33;
 console.log(person)
 
 //3-THE SUM OF ALL LUCKY NUMBERS
-let sum=0
-for(i=0;i<person.lucky_numbers.length;i++){
-    for(k=0; k<person2.lucky_numbers.length;k++){
-        for(n=0; n<person3.lucky_numbers.length;n++){
-        sum+=person.lucky_numbers[i],person2.lucky_numbers[k],person3.lucky_numbers[n]
-        }
+let sumperson1=0
+let sumperson2=0
+let sumperson3=0
+
+for(let i=0;i<person.lucky_numbers.length;i++){
+        sumperson1+=person.lucky_numbers[i]
     }
-}
-console.log(sum)
+for(let k=0;k<person2.lucky_numbers.length;k++){
+        sumperson2+=person2.lucky_numbers[k]
+    }
+for(let n=0;n<person3.lucky_numbers.length;n++){
+        sumperson3+=person3.lucky_numbers[n]
+    }
+console.log(sumperson1+sumperson2+sumperson3);
 
 //Do not make changes below:
 console.log(addAllFamilyLuckyNumbers(family.members)); 
